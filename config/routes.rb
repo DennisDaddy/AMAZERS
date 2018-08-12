@@ -1,19 +1,5 @@
 Rails.application.routes.draw do
- 
-  get 'categories/index'
-
-  get 'categories/new'
-
-  get 'categories/create'
-
-  get 'categories/edit'
-
-  get 'categories/update'
-
-  get 'categories/show'
-
-  get 'categories/destroy'
-
+  
   root 'static_pages#home'    
   get '/contact', to: 'static_pages#contact'
   get '/signup', to: 'users#new'
@@ -24,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :posts
+  resources :categories
   resources :account_activations, only: [:edit]
   resources :password_resets, only: [:new, :create, :edit, :update]
 
