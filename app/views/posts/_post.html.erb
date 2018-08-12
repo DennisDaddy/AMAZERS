@@ -1,0 +1,12 @@
+<li>
+<strong><%= link_to post.title, post %></strong>
+<span class="timestamp">
+    <i><b>Posted <%= time_ago_in_words(post.created_at) %> ago.</b></i>
+   <% if current_user?(post.user) %>
+	<%= link_to "Delete", post, method: :delete,
+	 data: { confirm: "You sure?" } %>
+	<%= link_to "Edit",edit_post_path(post) %>
+    <% end %>
+</span>
+<p><%= truncate(post.content, length: 100, separator: ''){ link_to 'Read More', post_path(post) } %> </p>
+</li>
