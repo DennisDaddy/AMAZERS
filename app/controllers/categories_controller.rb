@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  
   def index
     @categories = Category.all
   end
@@ -9,7 +10,7 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new(category_params)
-    if current_user.admin? && @category.save     
+    if @category.save     
       flash[:success] = "Category successfuly Created"
       redirect_to categories_path
     else
@@ -30,7 +31,6 @@ class CategoriesController < ApplicationController
 
   def update
     @category = Category.find(params[:id])
-
     if @category.update_attributes(category_params)
       flash[:success] = "Category successfuly updated!!"    
     redirect_to categories_path
