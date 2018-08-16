@@ -4,6 +4,9 @@
  * Licensed under Apache 2.0 (https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 20px;
@@ -80,6 +83,7 @@ hr.small {
   .navbar-custom .nav li a {
     color: white;
     padding: 20px;
+
   }
   .navbar-custom .nav li a:hover,
   .navbar-custom .nav li a:focus {
@@ -99,6 +103,7 @@ hr.small {
     transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    
   }
   .navbar-custom.is-fixed {
     /* when the user scrolls down, we hide the header right above the viewport */
