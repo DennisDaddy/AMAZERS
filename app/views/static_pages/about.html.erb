@@ -1,0 +1,63 @@
+<% provide(:title, 'About') %>
+<!-- Page Header -->
+<header class="intro-header" id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>About Me</h1>
+                    <hr class="small">
+                    <span class="subheading">Welcome to my blog!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<hr>
+<h3 align="center">Welcome to my blog!</h3>
+<hr>
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8"> 
+
+            <div class="thumbnail">
+            <div class="post-preview">                       
+
+              <p>
+                I'm a full-stack software engineer and UI/UX designer from Kenya.<br>
+                I believes in doing it today, not tomorrow. I enjoys gaming, lively hangouts with friends and family.<br>
+                You can also find me on <a href="">Facebook, Google+, LinkedIn, Github and Twitter.</a><br>
+
+                With this implementation you can use your own styled button or enable any element in your DOM or JavaScript event to trigger a Checkout payment.<br><br>The key here is to create a handler object (StripeCheckout.configure()) for you to call it later with the open() function in response to any event, and, if you need to abort the Checkout process, then you can call close() on the the handler.
+
+
+                Thank you for visiting!
+
+                </p>                    
+                
+            </div>
+            </div>
+            
+        </div>
+        <!-- End col-md-8 -->
+        
+        <div class="col-md-4">
+            <div class="thumbnail" style="padding: 10px;">
+            
+            <h3 align="center">Categories</h3>
+            <hr>                
+            <ul>             
+              <% Category.all.each do |category| %>
+              <%= link_to  category.name, category, class: "btn btn-default" %>
+               <% end %>             
+            </ul>              
+            </div>
+        </div>
+        <!-- End col-md-4 -->
+        
+    </div>
+    <!-- End row -->
+</div>
+<!-- End container -->
+
