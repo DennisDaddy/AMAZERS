@@ -3,8 +3,8 @@
 
 <section class="container">
 <div class="row">
-   <div class="col-lg-8">
-	    <h1><%= @category.name %></h1>
+   <div class="col-md-8">
+	    <h3 align="center"><%= @category.name %></h3>
 	    <hr>	
 	<% @posts.each do |post| %>
 	   <div class="col-sm-6 col-md-3">
@@ -25,13 +25,13 @@
 	</div>
 
 	<div class="col-md-4">	
-	    <ul>  
-	        <h4 align="center">Categories</h4>
-	        <hr>	    
-            <% Category.all.each do |category| %>
-               <li><%= link_to  category.name, category, class: "btn btn-default" %></li>
-            <% end %>   
-        </ul>  
+	    <h3 align="center">Categories</h3>
+            <hr>                
+            <ul>             
+              <% Category.all.each do |category| %>
+              <%= link_to  category.name, category, class: "btn btn-default" %>
+               <% end %>             
+            </ul>    
 	    <hr>		
 	</div>    
 

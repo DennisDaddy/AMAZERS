@@ -12,12 +12,12 @@
 </div>
 
 <div class="row">
-<ul>
-  <% @categories.each do |category| %> 
-    <li><%= link_to  category.name, category %></li>
-    <hr>
-  <% end %>
-</ul>
+  <ul>             
+      <% Category.all.each do |category| %>
+       <%= link_to  category.name, category, class: "btn btn-default" %>
+      <% end %>             
+  </ul>   
+
 </div>
 </div>
 
